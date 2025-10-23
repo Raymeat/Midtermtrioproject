@@ -1,0 +1,125 @@
+/* public/css/style.css */
+
+/* ==================================== */
+/* CSS HOME PAGE LETTERBOXD STYLE (Revisi) */
+/* ==================================== */
+body {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- HERO SECTION (Background Image) --- */
+main {
+    flex-grow: 1;
+    display: flex;
+    /* Kunci: Align-items: center dan Justify-content: center menempatkan konten di tengah vertikal dan horizontal */
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+
+    /* KUNCI: BACKGROUND IMAGE SETTINGS */
+    background-image: 
+        /* LAPISAN 1: Overlay hitam transparan */ linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.8)
+        ),
+        /* LAPISAN 2: URL Gambar (Ganti path ini ke lokasi gambar lo) */
+            /* PASTIKAN GAMBAR image_d46811.jpg diletakkan sebagai hero_bg.jpg */
+            url("/images/hero_bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* --- Teks Hero (Simpen semua memori...) --- */
+main .hero-content {
+    max-width: 800px; /* Lebarkan sedikit agar tulisan panjang terlihat bagus */
+    text-align: center; /* Pastikan teks rata tengah */
+    z-index: 10;
+}
+
+/* Mengatur ukuran dan gaya teks hero */
+.hero-content h1 {
+    font-size: 2.5em; /* Ukuran besar */
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content h2 {
+    font-size: 1.8em; /* Ukuran sedang */
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2em; /* Ukuran kecil */
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+/* --- Header/Navigasi (Logo Kiri, Link Kanan) --- */
+header {
+    width: 100%;
+    padding: 20px 0;
+    text-align: left;
+    z-index: 20;
+    position: relative;
+    /* Tambahkan background sedikit transparan agar teks terlihat jika mau */
+    /* background: rgba(0, 0, 0, 0.2); */
+}
+
+nav {
+    display: flex;
+    /* Kunci: justify-content: space-between */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Link Mifilms (Logo) */
+nav a:first-child {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #00e050; /* Warna logo Letterboxd */
+    text-decoration: none;
+}
+
+/* Link Login/Register */
+.auth-links a,
+.auth-links button {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 1em;
+    font-weight: 600;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Tombol Get Started (Hijau) */
+.hero-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #00e050; /* Warna hijau khas Letterboxd */
+    color: #000;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #00b03e;
+}
